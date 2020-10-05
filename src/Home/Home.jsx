@@ -3,14 +3,14 @@ import { useHistory } from 'react-router-dom';
 import './Home.css'
 
 const Home = () => {
-    /*const history = useHistory();
+    const history = useHistory();
     const handleClick = () => {
-        history.push("/login");
+        history.push("/staff-login");
     }
 
     const handleContact = () => {
-        history.push("/Contact-us");
-    } */
+        history.push("/student-login");
+    }
 
     return (
         <div class="grid-container">
@@ -25,10 +25,10 @@ const Home = () => {
             </div>
            
             <div className="button">
-                <button type="button">
+                <button type="button" onClick={handleClick}>
                     Staff Login
                 </button>
-                <button type="button">
+                <button type="button" onClick={handleContact}>
                     Student Login
                 </button>
             </div>
