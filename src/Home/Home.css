@@ -1,0 +1,16 @@
+.title {
+    text-align: center;
+}
+.img {
+    float: left;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+   
+}
+.p{
+    text-align: center;
+}
