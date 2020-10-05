@@ -1,3 +1,5 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+
 #login-root {
     display : flex;
     flex-direction: column;
@@ -5,11 +7,9 @@
     align-items: center;
 
 }
-    
 .login-wrapper {
-    min-width: 600px;
-    width : 70%;
-    height: 70%;
+    min-width: 500px;
+    width : 50%;
     margin : auto;
 
 }

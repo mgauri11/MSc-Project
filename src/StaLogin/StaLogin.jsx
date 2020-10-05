@@ -1,38 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from "axios";
 import './StaLogin.css'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { Card } from '@blueprintjs/core'
+import { useHistory } from 'react-router-dom';
+import { Card, Button, FormGroup, InputGroup } from '@blueprintjs/core'
 
 const StaLogin = () => {
+    const history = useHistory();
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const handleSubmit = (event) => {
+        history.push("/staff-page");
+        event.preventDefault();
+        
+        const userData = {
+            email,
+            password
+        }
+        axios.post("/api/auth/register_login", userData)
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            console.log(err);
+            console.log(err.response);
+        });
+    };
     
     return (
         <div id='login-root'>
-            <h1>Staff-Login</h1>
-            <Card className='login-wrapper' >
+            <h3>Staff-Login</h3>
+            <Card className='login-wrapper'>
                 <div className='login-container card'>
-                    <Form>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
-                            
-                        </Form.Group>
+                    <form>
+                        <FormGroup
+                        label='Email'
+                        labelFor='username-input'
+                        >
+                            <InputGroup
+                                id='username-input'
+                                data-testid='username-input'
+                                name="email"   
+                                onChange= {event => {
+                                    setEmail(event.target.value);
+                                }}
+                            />
+                        </FormGroup>
 
-                        <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
-                        </Form.Group>
-                        
-                        <Button  variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
-
+                        <FormGroup
+                        label='Password'
+                        labelFor='password-input'
+                        >
+                            <InputGroup
+                                type='password'
+                                id='password-input'
+                                data-testid='password-input'
+                                name="password"   
+                                onChange={event => setPassword(event.target.value)}
+                            />
+                        </FormGroup>
+                        <Button onClick={handleSubmit}  data-testid='submit-button'>Login</Button>
+                    </form>
                 </div>
+                        
             </Card>
-            
-
         </div>
+       
     ) 
 }
 
