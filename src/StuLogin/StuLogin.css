@@ -4,8 +4,8 @@
 #login-root {
     display : flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    height: 500px;
 
 }
     
