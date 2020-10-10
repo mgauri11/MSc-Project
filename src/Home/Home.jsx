@@ -18,13 +18,13 @@ const Home = () => {
                 <h1 >Feedback Booking System</h1>
             </div>
             <div className='img'>
-                <img src={require('./Uni.jpg')} alt='cool image coming soon!!!! ;)' width="500" height="500" ></img>
+                <img src={require('./school.jpg')} alt='cool image coming soon!!!! ;)' width="500" height="500" ></img>
             </div>
             <div>
-                <p className="p">The system allows staff and students to manage the feedback bookings.Work is in progress to get the basic functionalities and testing ready!!</p>
+                <p className="p1">The system allows staff and students to manage the feedback bookings.Work is in progress to get the basic functionalities and testing ready!!</p>
             </div>
            
-            <div className="button">
+            <div className="btn-group">
                 <button type="button" onClick={handleClick}>
                     Staff Login
                 </button>
