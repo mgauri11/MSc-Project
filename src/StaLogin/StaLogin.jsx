@@ -2,36 +2,53 @@ import React, { useState } from 'react'
 import axios from "axios";
 import './StaLogin.css'
 import { useHistory } from 'react-router-dom';
+//import Alert from 'react-bootstrap/Alert'
 import { Card, Button, FormGroup, InputGroup } from '@blueprintjs/core'
+
 
 const StaLogin = () => {
     const history = useHistory();
+    
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    const handleSubmit = (event) => {
-        history.push("/staff-page");
+    const handleSubmit = (event) => {    
+        
         event.preventDefault();
         
         const userData = {
+           
             email,
             password
         }
-        axios.post("/api/auth/register_login", userData)
+        axios.post("/staff/staff_login", userData)
         .then(res => {
             console.log(res);
+            if(res){
+                alert("successfully logged in")
+                history.push("/staff-page");
+            }
+            else{
+                alert("Enter correct details")
+            }
         })
         .catch(err => {
             console.log(err);
             console.log(err.response);
         });
+        
     };
+    
+    
+
+
     
     return (
         <div id='login-root'>
-            <h3>Staff-Login</h3>
+            <h3 id="h1">Staff-Login</h3>
             <Card className='login-wrapper'>
                 <div className='login-container card'>
-                    <form>
+                    <form >
+                    
                         <FormGroup
                         label='Email'
                         labelFor='username-input'
@@ -59,6 +76,7 @@ const StaLogin = () => {
                             />
                         </FormGroup>
                         <Button onClick={handleSubmit}  data-testid='submit-button'>Login</Button>
+                        
                     </form>
                 </div>
                         
