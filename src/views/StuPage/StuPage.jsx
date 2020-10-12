@@ -4,7 +4,7 @@ import axios from "axios"
 import './StuPage.css'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 
-const StuPage = () => {
+export const StuPage = () => {
 
     const [countries, setCountries] = useState([]);
 
@@ -45,4 +45,3 @@ const StuPage = () => {
     ) 
 }
 
-export default StuPage;

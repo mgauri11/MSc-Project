@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import { Card, Button, FormGroup, InputGroup } from '@blueprintjs/core'
 
 
-const StuLogin = () => {
+export const StuLogin = () => {
     const history = useHistory();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -84,5 +84,3 @@ const StuLogin = () => {
        
     ) 
 }
-
-export default StuLogin;

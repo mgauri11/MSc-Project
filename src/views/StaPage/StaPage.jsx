@@ -1,7 +1,7 @@
 import React from 'react'
 import './StaPage.css'
 
-const StaPage = () => {
+export const StaPage = () => {
     
 
     return (
@@ -11,4 +11,3 @@ const StaPage = () => {
     ) 
 }
 
-export default StaPage;
