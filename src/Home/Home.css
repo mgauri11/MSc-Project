@@ -2,24 +2,26 @@
     font-family: sans-serif;
     color: #E30A3F;
     font-weight: bold;
-}
-.t {
     text-align: center;
+    margin: 20px;
 }
-.img {
-    float: left;
+
+img {
+    border-radius: 8px;
+    
 }
-.btn-group button {
+.btn-group button  {
     background-color: #E30A3F; /* Green background */
-    border: 1px solid #E30A3F; /* Green border */
+    border: 1px solid black;/* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
+    margin: 60px;
+    margin-bottom: 20px;
     cursor: pointer; /* Pointer/hand icon */
+   
     width: 50%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
 }
+   
   
   
-.p1{
-    text-align: center;
-}
