@@ -14,15 +14,10 @@ const Home = () => {
 
     return (
         <div class="grid-container">
-            <div className='title'>
-                <h1 >Feedback Booking System</h1>
-            </div>
-            <div className='img'>
-                <img src={require('./school.jpg')} alt='cool image coming soon!!!! ;)' width="500" height="500" ></img>
-            </div>
-            <div>
-                <p className="p1">The system allows staff and students to manage the feedback bookings.Work is in progress to get the basic functionalities and testing ready!!</p>
-            </div>
+            
+            <h2 className='title'>Feedback Booking System</h2>
+            <img src={require('./uni.jpg')}  width="400" height="550"></img>
+          
            
             <div className="btn-group">
                 <button type="button" onClick={handleClick}>
