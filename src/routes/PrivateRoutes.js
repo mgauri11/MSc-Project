@@ -9,10 +9,10 @@ import { useHistory } from 'react-router-dom'
 export const PrivateRoutes = ({ component, path, exact }) => {
   const history = useHistory()
   const [authenticated, setAuthenticated] = useState(false)
-
+  
   useEffect(() => {
-    //const token = localStorage.getItem('')
-    if (true) {
+    const token = localStorage.getItem('jwt')
+    if (token) {
       setAuthenticated(true)
     } else {
       history.push('/')
