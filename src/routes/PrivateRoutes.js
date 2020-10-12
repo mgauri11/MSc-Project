@@ -1,6 +1,9 @@
 import {
     StaPage,
-    StuPage
+    StuPage,
+    Home,
+    StaLogin,
+    StuLogin
    
 } from '../views'
 
@@ -20,22 +23,22 @@ export const privateRoutes = [
   
 ]
 
-/*export const publicRoutes = [
+export const publicRoutes = [
     {
         id: 100,
         path: '/',
-        component: LoginView
-    },
-    {
-        id: 100,
-        path: '/login',
-        component: LoginView
+        component: Home
     },
     {
         id: 101,
-        path: '/',
-        component: NotFoundView
+        path: '/staff-login',
+        component: StaLogin
+    },
+    {
+        id: 102,
+        path: '/student-login',
+        component: StuLogin
     }
 
-]*/
+]
 
