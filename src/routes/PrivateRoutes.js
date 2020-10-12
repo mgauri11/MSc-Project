@@ -1,44 +1,25 @@
-import {
-    StaPage,
-    StuPage,
-    Home,
-    StaLogin,
-    StuLogin
-   
-} from '../views'
+
+import React, { useState, useEffect } from 'react'
+import { Route } from 'react-router'
+import { useHistory } from 'react-router-dom'
 
 
-export const privateRoutes = [
-    {
-        id: 1,
-        path: '"/staff-page"',
-        component: StaPage
-    },
-    {
-        id: 2,
-        path: "/student-page",
-        component: StuPage
+
+
+export const PrivateRoutes = ({ component, path, exact }) => {
+  const history = useHistory()
+  const [authenticated, setAuthenticated] = useState(false)
+
+  useEffect(() => {
+    //const token = localStorage.getItem('')
+    if (true) {
+      setAuthenticated(true)
+    } else {
+      history.push('/')
     }
-   
-  
-]
+  }, [history])
 
-export const publicRoutes = [
-    {
-        id: 100,
-        path: '/',
-        component: Home
-    },
-    {
-        id: 101,
-        path: '/staff-login',
-        component: StaLogin
-    },
-    {
-        id: 102,
-        path: '/student-login',
-        component: StuLogin
-    }
-
-]
-
+  return authenticated ? (
+    <Route component={component} path={path} exact={exact} />
+  ) : null
+}

@@ -3,7 +3,7 @@ import axios from "axios"
 import Header from './Header/Header'
 import './StuPage.css'
 
-const StuPage = () => {
+export const StuPage = () => {
 
     const [countries, setCountries] = useState([]);
 
@@ -32,4 +32,3 @@ const StuPage = () => {
     ) 
 }
 
-export default StuPage;
