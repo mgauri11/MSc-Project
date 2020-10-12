@@ -11,7 +11,7 @@ import {
 export const privateRoutes = [
     {
         id: 1,
-        path: '"/staff-page"',
+        path: '/staff-page',
         component: StaPage
     },
     {
