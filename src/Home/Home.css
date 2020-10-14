@@ -10,15 +10,13 @@ img {
     border-radius: 8px;
     
 }
-.btn-group button  {
+.button1  {
     background-color: #E30A3F; /* Green background */
     border: 1px solid black;/* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
     margin: 60px;
-    margin-bottom: 20px;
     cursor: pointer; /* Pointer/hand icon */
-   
     width: 50%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
 }

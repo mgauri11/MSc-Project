@@ -1,0 +1,20 @@
+.Dropdown{
+        
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    margin: 80px;
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+.b1{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.p2{
+    text-align: left;
+    margin: 20px;
+    padding: 10px;
+    font-size: larger;
+}

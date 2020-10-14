@@ -1,3 +1,5 @@
-.button{
-    float: right;
+.button2 {
+    position: absolute;
+    right: 0;
+    top: 0;
 }

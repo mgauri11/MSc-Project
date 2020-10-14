@@ -8,8 +8,8 @@ const Logout = () => {
         history.push("/");
     }
     return (
-      <div>
-        <Button className="button" variant="danger" onClick={handleClick}>Logout</Button>
+      <div className="button2">
+        <Button  variant="danger" onClick={handleClick}>Logout</Button>
       </div>
     );
 }

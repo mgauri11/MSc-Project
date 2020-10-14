@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
 import './Home.css'
+import Button from 'react-bootstrap/Button'
 
 const Home = () => {
     const history = useHistory();
@@ -19,11 +20,11 @@ const Home = () => {
             <img src={require('./uni.jpg')}  width="400" height="550"></img>
           
            
-            <div className="btn-group">
-                <button type="button" onClick={handleClick}>
+            <div className="button">
+                <button  variant="danger" onClick={handleClick}>
                     Staff Login
                 </button>
-                <button type="button" onClick={handleContact}>
+                <button variant="danger" onClick={handleContact}>
                     Student Login
                 </button>
             </div>
