@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter,Route, Switch } from 'react-router-dom'
-import { PrivateRoutes, privateRoutes, publicRoutes } from './routes'
+import Home from './Home/Home'
+import StaLogin from './StaLogin/StaLogin'
+import StuLogin from './StuLogin/StuLogin'
+import StaPage from './StaPage/StaPage'
+import StuPage from './StuPage/StuPage'
+
+import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 
 
 const App = () => {
@@ -9,19 +14,19 @@ const App = () => {
        
   return (
     
-     
-      <BrowserRouter>
-        <Switch>
-          {privateRoutes.map(({ id, path, component }) => (
-            <PrivateRoutes key={id} path={path} component={component} exact />
-          ))}
-          {publicRoutes.map(({ id, path, component }) => (
-            <Route key={id} path={path} component={component} />
-          ))}
-        </Switch>
-        
-      </BrowserRouter>
-      
+      <Router>
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/staff-login" exact component={StaLogin} />
+            <Route path="/student-login" exact component={StuLogin} />
+            <Route path="/staff-page" exact component={StaPage} />
+            <Route path="/student-page" exact component={StuPage} />
+            
+          </Switch>
+          
+        </main>
+      </Router>
      
     
 );

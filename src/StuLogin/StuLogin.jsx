@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import axios from "axios";
-import './StaLogin.css'
+import './StuLogin.css'
 import { useHistory } from 'react-router-dom';
 //import Alert from 'react-bootstrap/Alert'
 import { Card, Button, FormGroup, InputGroup } from '@blueprintjs/core'
 
 
-export const StaLogin = () => {
+const StuLogin = () => {
     const history = useHistory();
-    
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const handleSubmit = (event) => {    
@@ -20,12 +19,12 @@ export const StaLogin = () => {
             email,
             password
         }
-        axios.post("/staff/staff_login", userData)
+        axios.post("/users/login", userData)
         .then(res => {
             console.log(res);
             if(res){
                 alert("successfully logged in")
-                history.push("/staff-page");
+                history.push("/student-page");
             }
             else{
                 alert("Enter correct details")
@@ -44,11 +43,11 @@ export const StaLogin = () => {
     
     return (
         <div id='login-root'>
-            <h3 id="h1">Staff-Login</h3>
+            <h3 id="h1">Student-Login</h3>
             <Card className='login-wrapper'>
                 <div className='login-container card'>
                     <form >
-                    
+                   
                         <FormGroup
                         label='Email'
                         labelFor='username-input'
@@ -85,3 +84,4 @@ export const StaLogin = () => {
        
     ) 
 }
+export default StuLogin;

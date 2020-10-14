@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import './Home.css'
 
-export const Home = () => {
+const Home = () => {
     const history = useHistory();
     const handleClick = () => {
         history.push("/staff-login");
@@ -32,3 +32,4 @@ export const Home = () => {
     ) 
 }
 
+export default Home;
