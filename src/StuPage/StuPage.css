@@ -1,15 +1,25 @@
 .login-root {
     display : flex;
     flex-direction: column;
+    justify-content: space-evenly ;
+
+    
 
 }
+
 .title {
     text-align: center;
 }
 .p1 {
    
-    text-align: left;
-    padding: 100px;
+    display : flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:space-between;
+
+}
+.p2{
+    text-align: center;
 }
 .b1{
     position: absolute;
@@ -21,5 +31,27 @@
     display:flex;
     flex-direction: row;
     justify-content: center;
-    justify-items: flex-start;
+    justify-items: center;
+   
+}
+.button_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 10%;
+    margin-left: 45%;
+  
+}
+.textarea{
+    width: 70%;
+    margin-left: 20%;
+    text-align: center;
+    
+
+}
+.mod_info{
+    text-align: center;
 }

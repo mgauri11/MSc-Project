@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import axios from "axios";
 import './StaLogin.css'
 import { useHistory } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar'
 //import Alert from 'react-bootstrap/Alert'
-import { Card, Button, FormGroup, InputGroup } from '@blueprintjs/core'
+import Button from 'react-bootstrap/Button'
+import { Card,Elevation,  FormGroup, InputGroup } from '@blueprintjs/core'
 
 
 const StaLogin = () => {
@@ -44,10 +46,23 @@ const StaLogin = () => {
     
     return (
         <div id='login-root'>
-            <h3 id="h1">Staff-Login</h3>
-            <Card className='login-wrapper'>
-                <div className='login-container card'>
-                    <form >
+            <div >
+                <Navbar bg="light" expand="sm">
+                    <Navbar.Brand>
+                    <img
+                        alt="School-Image"
+                        src={require('../Home/logo.jpg')}
+                        width="70"
+                        height="70"
+                        className="img"
+                    />{' '}
+                    </Navbar.Brand>
+                    <Navbar className='Heading'>Staff-Login</Navbar>
+                </Navbar>
+            </div>
+            <Card className='login-wrapper' elevation={Elevation.TWO}>
+                <div className='login-container'>
+                    
                     
                         <FormGroup
                         label='Email'
@@ -75,9 +90,9 @@ const StaLogin = () => {
                                 onChange={event => setPassword(event.target.value)}
                             />
                         </FormGroup>
-                        <Button onClick={handleSubmit}  data-testid='submit-button'>Login</Button>
+                        <Button variant="danger" className="button" onClick={handleSubmit}  data-testid='submit-button'>Login</Button>
                         
-                    </form>
+                
                 </div>
                         
             </Card>
