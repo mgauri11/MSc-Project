@@ -31,7 +31,16 @@
     justify-content: flex-start;
     align-items: flex-start;
     width:18%;
-    margin: 5%;
+    margin: 3%;
   
     
+}
+.alert{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    font-size: medium;
+    margin: 2%;
+
 }

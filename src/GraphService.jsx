@@ -3,8 +3,7 @@
 
 // <graphServiceSnippet1>
 var graph = require('@microsoft/microsoft-graph-client');
-//import { graph } from 'microsoft-graph-client';
-//import { graph } from "@microsoft/microsoft-graph-client";
+
 
 function getAuthenticatedClient(accessToken) {
   // Initialize Graph client
@@ -31,13 +30,41 @@ export async function getUserDetails(accessToken) {
 // <getEventsSnippet>
 /*export async function getEvents(accessToken) {
   const client = getAuthenticatedClient(accessToken);
+  //const event= {}
+  const event = {
+    subject: "Prep for customer meeting",
+    body: {
+      contentType: "Text",
+      content: "Feedback questions"
+    },
+    start: {
+        dateTime: "2021-11-20T13:00:00",
+        timeZone: "UTC"
+    },
+    end: {
+        dateTime: "2021-11-20T14:00:00",
+        timeZone: "UTC"
+    },
+    
+    attendees: [
+      {
+        emailAddress: {
+          address:"Rochan@cardiff.ac.uk",
+          name: "Matthew"
+        }
+       
+      }
+    ],
+    allowNewTimeProposals: true,
+    isOnlineMeeting: true,
+    onlineMeetingProvider: "teamsForBusiness"
+};
+  
+  let res = await client.api('/me/events')
+    .post(event);
+    //console.log(res)
+  
 
-  const events = await client
-    .api('/me/events')
-    .select('subject,organizer,start,end')
-    .orderby('createdDateTime DESC')
-    .get();
-
-  return events;
+  
 }*/
 // </getEventsSnippet>

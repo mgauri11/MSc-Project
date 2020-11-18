@@ -8,6 +8,7 @@ const Logout = () => {
     const history = useHistory();
     //const myMSALObj = new UserAgentApplication(msalConfig);
     //const username = "";
+    
     const handleClick = () => {
         history.push("/");
     }

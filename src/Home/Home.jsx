@@ -31,8 +31,8 @@ const Home = () => {
                 </Navbar>
             </div>
             <div className='Row-2'>
-                <p>This system allows students to book feedback sessions for the assessed coursework/exam with appropriate staff member. 
-                    Please use your university credentials for accessing the system and continue with your bookings.
+                <p>This system allows inidividual students to book feedback sessions for the assessed coursework/exam with appropriate staff member. Moreover, it gives platform to individual students to ask for further feedback on their assessed courework/exams. 
+                    
                 </p>
             </div>
             <div className='Row-3'>

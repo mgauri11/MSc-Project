@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './StuLogin.css'
-//import { UserAgentApplication } from 'msal';
 import * as Msal from 'msal';
-import { getUserDetails } from '../GraphService';
+import { getUserDetails,getEvents } from '../GraphService';
 import { msalConfig} from '../config';
 import { useHistory } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar'
-//import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import { Card, FormGroup, InputGroup } from '@blueprintjs/core'
+import Alert from 'react-bootstrap/Alert'
 
 
 const StuLogin = () => {
@@ -29,16 +28,12 @@ const StuLogin = () => {
         }
     });
      
-     
-    console.log(msalConfig.scopes);
     //sign-in function for Microsoft account login
     const signIn = async () => {
-        
-            
+
         await userAgentApplication.loginPopup(msalConfig.scopes); 
         await getUserProfile();
-        
-      
+     
     }
     //sign-out function for Microsoft account logout
     const signOut = () => {
@@ -92,6 +87,9 @@ const StuLogin = () => {
           console.log(err);
         }
     }
+    
+
+    
     const isInteractionRequired = (error) => {
         if (!error.message || error.message.length <= 0) {
           return false;
@@ -149,7 +147,13 @@ const StuLogin = () => {
                     
                 </Navbar>
             </div>
-            <Button variant="primary" className='button_out' onClick={handlePush}  data-testid='submit-button'>Click to access page after login</Button>           
+            <div>
+                <Alert className="alert" variant="warning">
+                    Note: This application is integrated with  Microsoft Outlook Calendar API, so you can simply enter anything in email and password field and press login followed by clicking the blue button below! If you want to know why these steps are followed,please feel free to ask for clarification.
+                </Alert>
+            </div>
+            <Button variant="primary" className='button_out' onClick={handlePush}  data-testid='submit-button'>Click to access page after login</Button>   
+                           
           <Card className='login-wrapper'>
             <div className='login-container'>
                 <FormGroup
@@ -179,10 +183,11 @@ const StuLogin = () => {
                     />
                 </FormGroup>
                 <Button variant="danger" className='button_stu' onClick={signIn}  data-testid='submit-button'>Login</Button>
-                {<Button variant="danger" className='button_stu' onClick={signOut}  data-testid='submit-button'>Logout</Button>}
+                {/*<Button variant="danger" className='button_stu' onClick={signOut}  data-testid='submit-button'>Logout</Button>*/}
                 
             </div>
           </Card> 
+          
         </div>
     ) 
 }
