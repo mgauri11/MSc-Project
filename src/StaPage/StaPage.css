@@ -1,11 +1,19 @@
 .Dropdown{
         
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    margin: 80px;
-    cursor: pointer; /* Pointer/hand icon */
-    width: 50%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   justify-items: center;
+   position: absolute;
+    right: 30%;
+    top: 38%;
+}
+.para{
+    text-align: center;
+    position: absolute;
+    right: 40%;
+    top: 34%;
 }
 .b1{
     position: absolute;
@@ -22,4 +30,42 @@
     margin: 20px;
     padding: 10px;
     font-size: larger;
+}
+.button_update {
+    position: absolute;
+    width: 15%;
+    top: 45%;
+    right: 45%
+    
+    
+}
+.button_save {
+    position: absolute;
+    width: 15%;
+    top: 45%;
+    right: 25%
+   
+}
+.button_test {
+    position: absolute;
+    top: 16%;
+    right: 1%;
+   
+}
+.list_button{
+    float: right;
+}
+.alert_staffpage{
+    position: absolute;
+    top: 12%;
+    left: 30%;
+}
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-items: center;
+    
 }

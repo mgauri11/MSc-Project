@@ -34,3 +34,10 @@
     width: 10%;
 }
 
+
+.alert_staff{
+    
+    position: absolute;
+    top: 13%;
+    left: 1%;
+}

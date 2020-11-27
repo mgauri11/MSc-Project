@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/Navbar'
 //import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import { Card,Elevation,  FormGroup, InputGroup } from '@blueprintjs/core'
-
+import AppToaster from '../StuPage/Toaster';
+import Alert from 'react-bootstrap/Alert'
 
 const StaLogin = () => {
     const history = useHistory();
@@ -24,16 +25,13 @@ const StaLogin = () => {
         }
         axios.post("/staff/staff_login", userData)
         .then(res => {
+            AppToaster.show({ message: 'Successfully logged in', intent: 'success' ,timeout: 1000});
+            history.push("/staff-page");
             console.log(res);
-            if(res){
-                alert("successfully logged in")
-                history.push("/staff-page");
-            }
-            else{
-                alert("Enter correct details")
-            }
+            
         })
         .catch(err => {
+            AppToaster.show({ message: 'Login failed.Please try again.', intent: 'danger' ,timeout: 5000});
             console.log(err);
             console.log(err.response);
         });
@@ -59,6 +57,13 @@ const StaLogin = () => {
                     </Navbar.Brand>
                     <Navbar className='Heading'>Staff-Login</Navbar>
                 </Navbar>
+            </div>
+            <div>
+                <Alert className="alert_staff" variant="warning">
+                    Please use following login details: 
+                    Email: PhillipsHR@cardiff.ac.uk
+                    Password: PhillipsHR
+                </Alert>
             </div>
             <Card className='login-wrapper' elevation={Elevation.TWO}>
                 <div className='login-container'>

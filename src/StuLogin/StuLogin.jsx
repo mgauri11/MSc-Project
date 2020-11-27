@@ -149,7 +149,7 @@ const StuLogin = () => {
             </div>
             <div>
                 <Alert className="alert" variant="warning">
-                    Note: This application is integrated with  Microsoft Outlook Calendar API, so you can simply enter anything in email and password field and press login followed by clicking the blue button below! If you want to know why these steps are followed,please feel free to ask for clarification.
+                    Note: This application is integrated with  Microsoft Outlook Calendar API, so you can enter anything in email and password field and press login and then finally click the blue button below! If you want to know why these steps are followed,please feel free to ask for clarification!
                 </Alert>
             </div>
             <Button variant="primary" className='button_out' onClick={handlePush}  data-testid='submit-button'>Click to access page after login</Button>   
@@ -183,7 +183,7 @@ const StuLogin = () => {
                     />
                 </FormGroup>
                 <Button variant="danger" className='button_stu' onClick={signIn}  data-testid='submit-button'>Login</Button>
-                {/*<Button variant="danger" className='button_stu' onClick={signOut}  data-testid='submit-button'>Logout</Button>*/}
+                {<Button variant="danger" className='button_stu' onClick={signOut}  data-testid='submit-button'>Logout</Button>}
                 
             </div>
           </Card> 

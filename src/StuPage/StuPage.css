@@ -32,6 +32,9 @@
     flex-direction: row;
     justify-content: center;
     justify-items: center;
+    position: absolute;
+    right: 30%;
+    top: 36%;
    
 }
 .button_2{
@@ -42,7 +45,7 @@
     align-content: center;
     justify-content: center;
     width: 10%;
-    margin-left: 45%;
+    margin-left: 50%;
   
 }
 .textarea{
@@ -53,5 +56,41 @@
 
 }
 .mod_info{
-    text-align: center;
+    
+    position: absolute;
+    right: 39%;
+    top: 44%;
+    
+
+}
+.staff_info{
+    position: absolute;
+    right: 45%;
+    top: 61%;
+    
+
+}
+.alert_page{
+    
+    position: absolute;
+    top: 14%;
+    left: 18%;
+}
+.modal_stu{
+    position: absolute;
+    top: 19%;
+    left: 91%;
+
+}
+.list_911{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-items: center;
+}
+.alert_slot{
+    position: absolute;
+    top: 60%;
+    right: 82% ;
+    
 }
