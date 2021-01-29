@@ -1,15 +1,16 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
+// Reference for writing and accessing all Microsoft methods/functions in this file is taken from https://github.com/microsoftgraph/msgraph-training-reactspa/tree/main/demo/graph-tutorial.
+//The tutorial is in TypeScript, I have converted the code into JavaScript syntax.
 
-// <graphServiceSnippet1>
+
 var graph = require('@microsoft/microsoft-graph-client');
 
 
 function getAuthenticatedClient(accessToken) {
   // Initialize Graph client
   const client = graph.Client.init({
-    // Use the provided access token to authenticate
-    // requests
+    // Use the provided access token to authenticate requests
     authProvider: (done) => {
       done(null, accessToken);
     }
@@ -25,46 +26,3 @@ export async function getUserDetails(accessToken) {
   console.log("Working!!");
   return user;
 }
-// </graphServiceSnippet1>
-
-// <getEventsSnippet>
-/*export async function getEvents(accessToken) {
-  const client = getAuthenticatedClient(accessToken);
-  //const event= {}
-  const event = {
-    subject: "Prep for customer meeting",
-    body: {
-      contentType: "Text",
-      content: "Feedback questions"
-    },
-    start: {
-        dateTime: "2021-11-20T13:00:00",
-        timeZone: "UTC"
-    },
-    end: {
-        dateTime: "2021-11-20T14:00:00",
-        timeZone: "UTC"
-    },
-    
-    attendees: [
-      {
-        emailAddress: {
-          address:"Rochan@cardiff.ac.uk",
-          name: "Matthew"
-        }
-       
-      }
-    ],
-    allowNewTimeProposals: true,
-    isOnlineMeeting: true,
-    onlineMeetingProvider: "teamsForBusiness"
-};
-  
-  let res = await client.api('/me/events')
-    .post(event);
-    //console.log(res)
-  
-
-  
-}*/
-// </getEventsSnippet>

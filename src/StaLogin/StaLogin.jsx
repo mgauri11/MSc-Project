@@ -3,7 +3,6 @@ import axios from "axios";
 import './StaLogin.css'
 import { useHistory } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar'
-//import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import { Card,Elevation,  FormGroup, InputGroup } from '@blueprintjs/core'
 import AppToaster from '../StuPage/Toaster';
@@ -40,7 +39,7 @@ const StaLogin = () => {
     
     
 
-
+//Cardiff University logo is taken from:https://www.google.com/search?q=cardiff%20university%20logo&tbm=isch&hl=en-US&tbs&rlz=1C1GIWA_enIN620IN620&sa=X&ved=0CAEQpwVqFwoTCKi08oft5O0CFQAAAAAdAAAAABAD&biw=1349&bih=657#imgrc=V6YmVz-cWSYWSM
     
     return (
         <div id='login-root'>

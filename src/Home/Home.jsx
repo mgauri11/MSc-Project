@@ -4,8 +4,10 @@ import './Home.css'
 import Button from 'react-bootstrap/Button'
 import Navbar from 'react-bootstrap/Navbar'
 
+// Reference for React Bootstrap components was taken from: Navbar : https://react-bootstrap.github.io/components/navbar/ & Button: https://react-bootstrap.github.io/components/buttons/
+
 const Home = () => {
-    const history = useHistory();
+    const history = useHistory(); // Method defined/used for redirecting to specified pages
     const handleClick = () => {
         history.push("/staff-login");
     }
@@ -13,7 +15,7 @@ const Home = () => {
     const handleContact = () => {
         history.push("/student-login");
     }
-
+//Cardiff University logo is taken from:https://www.google.com/search?q=cardiff%20university%20logo&tbm=isch&hl=en-US&tbs&rlz=1C1GIWA_enIN620IN620&sa=X&ved=0CAEQpwVqFwoTCKi08oft5O0CFQAAAAAdAAAAABAD&biw=1349&bih=657#imgrc=V6YmVz-cWSYWSM
     return (
         <div id="grid-container">
             <div >
@@ -41,9 +43,7 @@ const Home = () => {
             </div>
             <div className='Row-4'>
                 <Button variant="danger" onClick={handleContact}>Student-Login</Button>
-            </div>
-           
-            
+            </div>   
         </div>
         
     ) 
@@ -51,20 +51,3 @@ const Home = () => {
 
 export default Home;
 
-/*
-{/*<div id="grid-container">
-            
-            <h2 className='title'>Feedback Booking System</h2>
-            <img src={require('./uni.jpg')}  width="400" height="400"></img>
-          
-           
-            <div className="button1">
-                <Button  variant="danger" onClick={handleClick}>
-                    Staff Login
-                </Button>
-                <Button variant="danger" onClick={handleContact}>
-                    Student Login
-                </Button>
-            </div>
-    
-    </div>*/

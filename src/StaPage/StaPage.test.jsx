@@ -3,7 +3,6 @@ import { StaPage } from './StaPage'
 
 
 describe('Staff Page component', () => {
-
     it('should render', () => {
         expect(< StaPage />).toBeTruthy()
     })

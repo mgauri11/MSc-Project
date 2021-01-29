@@ -26,12 +26,9 @@
     
 }
 .button_out{
-    display:  flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width:18%;
-    margin: 3%;
+    position: absolute;
+    right: 39%;
+    top: 59%;
   
     
 }

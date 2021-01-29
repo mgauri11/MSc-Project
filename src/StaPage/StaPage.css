@@ -47,18 +47,26 @@
    
 }
 .button_test {
+    
     position: absolute;
-    top: 16%;
-    right: 1%;
+    top: 55%;
+    right: 45%;
+   
+}
+.button_view {
+    position: absolute;
+    top: 55%;
+    right: 21%;
    
 }
 .list_button{
-    float: right;
+    float: left;
+    margin: 1%;
 }
 .alert_staffpage{
     position: absolute;
     top: 12%;
-    left: 30%;
+    left: 20%;
 }
 
 
@@ -68,4 +76,10 @@
     width: 50%;
     justify-items: center;
     
+}
+.modal_sta{
+    position: absolute;
+    top: 16%;
+    left: 91%;
+
 }
