@@ -4,7 +4,7 @@ import './Home.css'
 import Button from 'react-bootstrap/Button'
 import Navbar from 'react-bootstrap/Navbar'
 
-// Reference for React Bootstrap components was taken from: Navbar : https://react-bootstrap.github.io/components/navbar/ & Button: https://react-bootstrap.github.io/components/buttons/
+// // Reference for React Bootstrap components was taken from: Navbar : https://react-bootstrap.github.io/components/navbar/ & Button: https://react-bootstrap.github.io/components/buttons/
 
 const Home = () => {
     const history = useHistory(); // Method defined/used for redirecting to specified pages
